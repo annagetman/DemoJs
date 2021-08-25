@@ -16,22 +16,39 @@
 //}
 
 let arrRecrangls = [
-    { name: 'reg1', a: 3, b: 2, c:4},
-    { name: 'reg2', a: 3, b: 7, c:5},
-    { name: 'reg3', a: 6, b: 2, c:2}
+    { name: 'ABC3', a: 3, b: 7, c: 5 },
+    { name: 'ABC1', a: 3, b: 2, c: 4 },
+    { name: 'ABC2', a: 2, b: 4, c: 4 }
 ];
 //const sortRegtangls = (arr) => {
-  
+
 //}
 //sortRegtangls(arrRecrangls)
-console.log(arrRecrangls.name)
-const getSRegtangle = (a, b, c) => {
-    let s = 0;
-    let p = (a + b + c) / 2;
-    console.log(p)
-    s = Math.sqrt(p * (p - a) * (p - b) * (p - c));
 
-    console.log(s.toFixed(2));
+//console.log(arrRecrangls.name)
+const getSRegtangle = (a, b, c) => {
+    let p = (a + b + c) / 2;
+    // console.log(p)
+    let s = Math.sqrt(p * (p - a) * (p - b) * (p - c));
+    return s;
+    //console.log(s.toFixed(2));
 }
 
-getSRegtangle(3, 3, 3);
+console.log('--------')
+
+let sortArrayRegtangls = [];
+
+const sortRegtangl = (arr) => {
+    arr.forEach(function (item) {
+        let res = getSRegtangle(item.a, item.b, item.c);
+        console.log(res.toFixed(2));
+
+        console.log(sortArrayRegtangls.push(item.name))
+        //console.log(typeof (sortArrayRegtangls))
+        //console.log(sortArrayRegtangls)
+        sortArrayRegtangls.sort();
+        console.log(sortArrayRegtangls)
+    })
+}
+
+sortRegtangl(arrRecrangls);
