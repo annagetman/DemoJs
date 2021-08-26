@@ -20,6 +20,10 @@ describe("sum", function () {
     it("для отрицательных n возвращает NaN", function () {
         assert.isNaN(sum(-2, -1));
     });
-
-
 });
+
+//describe('createChessBoard', function () {
+//    it('Board', function () {
+//        assert.equal(createChessBoard(4, 6), typeof(String))
+//    })
+//})

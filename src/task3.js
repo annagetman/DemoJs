@@ -41,14 +41,15 @@ let sortArrayRegtangls = [];
 const sortRegtangl = (arr) => {
     arr.forEach(function (item) {
         let res = getSRegtangle(item.a, item.b, item.c);
-        console.log(res.toFixed(2));
+        //console.log(res.toFixed(2));
 
         console.log(sortArrayRegtangls.push(item.name))
         //console.log(typeof (sortArrayRegtangls))
         //console.log(sortArrayRegtangls)
         sortArrayRegtangls.sort();
-        console.log(sortArrayRegtangls)
+       
     })
 }
 
 sortRegtangl(arrRecrangls);
+console.log(sortArrayRegtangls)
