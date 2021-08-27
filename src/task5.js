@@ -7,3 +7,15 @@
 
 //Входные параметры: объект context с полями min и max
 //Выход: объект с информацией о победившем методе и количестве счастливых билетов для каждого способа подсчёта.
+
+console.log('******************')
+const firstWay = function (num) {
+    let firstSumm = 0;
+    let secondSumm = 0;
+   // if (num.lenght == 6) {
+        for (i = 0; i < num; i++) {
+            console.log(num)
+        //}
+    }
+}
+console.log(firstWay(235145))

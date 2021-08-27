@@ -1,37 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <!-- добавим стили mocha для отображения результатов -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
-    <!-- добавляем сам фреймворк mocha -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js">
-    </script>
-    <script>
-        // включаем режим тестирования в стиле BDD
-        mocha.setup('bdd');
-    </script>
-    <!-- добавим chai -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js">
-    </script>
-    <script>
-        // chai предоставляет большое количество функций. Объявим assert глобально
-        let assert = chai.assert;
-    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/9.1.0/mocha.css" integrity="sha512-Ytt2foRGKdIInPXwyS3gxRvfTv4n2wi7uB7neCLH1LjExT+PKBeQu6LNVB4QpHaJqx7m2btagBs4kqxYC1QNFg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <script>
-        function sum(x, y) {          
-            let result;          
-            return result = x + y;      
-                                        /* Здесь будет реализация функции*/
-}
-    </script>
-    <!-- скрипт со спецификацией (describe, it...) -->
-    <script src="test.js"></script>
-    <!-- элемент с id="mocha" будет содержать результаты тестов -->
+
     <div id="mocha"></div>
-    <!-- запускаем тесты! -->
-    <script>
-        mocha.run();</script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/9.1.0/mocha.js" integrity="sha512-8yPgscBVJ0VPhdPt4FRCmk452obMrklnyzWBQEW97k0O044IlvA2qePa4+/j05oh1V6aRkAcGAEagDRqvNXX0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/4.3.4/chai.js" integrity="sha512-qDtXqvTiGAZbBw0oXQl0DdO2Zcf91U6Qy8at56bzyj5DSJ0pMJefTbQgkaCl1vvo+rkqd8tmZH4pH6uPPMjd9A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="main.js" type="module"></script>
 </body>
 </html>

@@ -6,27 +6,22 @@
 //¬ходные параметры: объекты конверт1 и конверт2
 //¬ыход: номер конверта, если вложение возможно, 0 Ц если вложение невозможно.
 
-const envelopes1 = { a: 4, b: 6 };
+const envelopes1 = { a: 6, b: 8 };
 const envelopes2 = { c: 5, d: 7 };
-let res = '';
+let res= 0;
 
-const getAnalysisofEnvelopes = (obj1, obj2) => {
+export const getAnalysisofEnvelopes = (obj1, obj2) => {
     if (obj1.a < obj2.c && obj1.b < obj2.d) {
-        res = 'Envelopes 2';
+        res = 2;
     }
    else if (obj1.a > obj2.c && obj1.b > obj2.d) {
-        res = 'Envelopes 1';
+        res = 1;
     }
     else {
-        res = '0';
+        res = 0;
     }
 
 }
 
-getAnalysisofEnvelopes(envelopes1, envelopes2);
+//getAnalysisofEnvelopes(envelopes1, envelopes2);
 console.log(res)
-
-//if (aWidth < bWidth && aHeight < bHeight || aWidth < bHeight && aHeight < bWidth) {
-//    return 1;
-//} else if (aWidth > bWidth && aHeight > bHeight || aWidth > bHeight && aHeight > bWidth) {
-
