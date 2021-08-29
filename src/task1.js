@@ -24,5 +24,7 @@ export const createChessBoard = (length, width, symb) => {
     }
 }
 
-//createChessBoard(6, 12, '*')
-console.log(board);
+////createChessBoard(6, 12, '*')
+//console.log(board);
+
+

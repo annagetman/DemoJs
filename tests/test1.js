@@ -3,15 +3,15 @@ import { createChessBoard } from '../src/task1.js';
 export const test1 = (assert) => {
     describe('Task 1', function () {
         it('function work correctly', function () {
-            let str = ' * \n* *\n * \n';
+            const str = ' * \n* *\n * \n';
             assert.equal(createChessBoard(3, 3, '*'), str);
         });
         it('type is string', function () {
             assert.typeOf(createChessBoard(1, 1, "*"), 'string');
         });
         it('symbol is correct', function () {
-            let symbol = '*';
-            let result = createChessBoard(3, 3, symbol);
+            const symbol = '*';
+            const result = createChessBoard(3, 3, symbol);
             assert.equal(symbol, '*');
         });
         //it('width is bigger than 0', function () {

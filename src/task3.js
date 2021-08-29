@@ -16,9 +16,9 @@
 //}
 
 let arrRecrangls = [
-    { name: 'ABC3', a: 3, b: 7, c: 5 },
-    { name: 'ABC1', a: 3, b: 2, c: 4 },
-    { name: 'ABC2', a: 2, b: 4, c: 4 }
+    { name: 'ABC', a: 3, b: 7, c: 5 },
+    { name: 'MNB', m: 3, n: 2, b: 4 },
+    { name: 'XSF', x: 2, s: 4, f: 4 }
 ];
 //const sortRegtangls = (arr) => {
 
