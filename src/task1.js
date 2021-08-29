@@ -6,10 +6,31 @@
 //  *  *  *  *  *  *
 //Входные параметры: длина, ширина, символ для отображения.
 //    Выход: строка с представлением шахматной доски
-let board = ''
-let result = '';
+
+
 export const createChessBoard = (length, width, symb) => {
-    if (width || length != 0) {
+    let board = '';
+    let result = '';
+
+    if (width <= 0 || length <= 0) {
+        let invalidData = {
+            status: 'fail',
+            reason: 'width and length must be bigger 0'
+        };
+        return invalidData;
+    } else if (width == undefined || length == undefined || symb == undefined) {
+        let invalidData = {
+            status: 'fail',
+            reason: 'enter width, length and symbol'
+        };
+        return invalidData;
+    } else if (typeof (symb) != 'string') {
+        let invalidData = {
+            status: 'fail',
+            reason: 'symbol must be a string'
+        }
+        return invalidData;
+    } else {
         for (let i = 0; i < length; i++) {
             for (let j = 0; j < width; j++) {
                 //result += (i % 2 === 1) ? ' ' + symb : symb + ' ';
@@ -19,12 +40,9 @@ export const createChessBoard = (length, width, symb) => {
         }
         return board;
     }
-    else {
-        console.log('enter data')
-    }
 }
 
-////createChessBoard(6, 12, '*')
+//createChessBoard(6, 12, '*')
 //console.log(board);
 
 

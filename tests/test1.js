@@ -14,53 +14,42 @@ export const test1 = (assert) => {
             const result = createChessBoard(3, 3, symbol);
             assert.equal(symbol, '*');
         });
-        //it('width is bigger than 0', function () {
-        //    let invalidData = {
-        //        status: 'failed',
-        //        reason: 'width and height must be bigger than 0'
-        //    };
-        //    let result = createChessBoard(0, 5, 'x');
+        it('width and length must be bigger 0', function () {
+            let invalidData = {
+                status: 'fail',
+                reason: 'width and length must be bigger 0'
+            };
+            let result = createChessBoard(0, 3, '*');
 
-        //    let invalidDataString = JSON.stringify(invalidData);
-        //    let resultString = JSON.stringify(result);
+            assert.deepEqual(result, invalidData);
+        });
 
-        //    assert.equal(resultString, invalidDataString);
-        //});
-        //it('height is bigger than 0', function () {
-        //    let invalidData = {
-        //        status: 'failed',
-        //        reason: 'width and height must be bigger than 0'
-        //    };
-        //    let result = createChessBoard(25, 0, 'x');
+        it('width and length must be bigger 0', function () {
+            let invalidData = {
+                status: 'fail',
+                reason: 'width and length must be bigger 0'
+            };
+            let result = createChessBoard(88, 0, '*');
 
-        //    let invalidDataString = JSON.stringify(invalidData);
-        //    let resultString = JSON.stringify(result);
-
-        //    assert.equal(resultString, invalidDataString);
-        //});
+            assert.deepEqual(result, invalidData);
+        });
         it('function call arguments is not empty', function () {
             let invalidData = {
-                status: 'failed',
-                reason: 'please, put width, length and symbol to the function call'
+                status: 'fail',
+                reason: 'enter width, length and symbol'
             };
             let result = createChessBoard();
 
-            let invalidDataString = JSON.stringify(invalidData);
-            let resultString = JSON.stringify(result);
-
-            assert.equal(resultString, invalidDataString);
+            assert.deepEqual(result, invalidData);
         });
         it('symbol is a string', function () {
             let invalidData = {
-                status: 'failed',
+                status: 'fail',
                 reason: 'symbol must be a string'
             }
             let result = createChessBoard(2, 2, 1);
 
-            let invalidDataString = JSON.stringify(invalidData);
-            let resultString = JSON.stringify(result);
-
-            assert.equal(resultString, invalidDataString);
+            assert.deepEqual(result, invalidData);
         });
     });
 }
