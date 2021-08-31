@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src"
   ],
-  "SelectedNode": "\\main.js",
+  "SelectedNode": "\\src\\task2.js",
   "PreviewInSolutionExplorer": false
 }
