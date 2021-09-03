@@ -1,7 +1,7 @@
 import { longestPalindrome } from '../src/task4.js';
 
 export const test4 = (assert) => {
-    describe('Task 4', function () {
+    describe('Task 4 - "Palindrome"', function () {
         it('function work', function () {
             let result = longestPalindrome('2552698');
             assert.deepEqual(result, '2552');

@@ -1,7 +1,7 @@
 import { getNumbersFibonacci } from '../src/task7.js';
 
 export const test7 = (assert) => {
-    describe('Task 7', function () {
+    describe('Task 7 - "Fibonacci range"', function () {
         it('function work', function () {
             const str = [0, 1, 1, 2, 3, 5, 8];
             const num = { length: 7 }

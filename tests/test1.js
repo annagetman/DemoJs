@@ -1,7 +1,7 @@
 import { createChessBoard } from '../src/task1.js';
 
 export const test1 = (assert) => {
-    describe('Task 1', function () {
+    describe('Task 1 - "Chess board"', function () {
         it('function work', function () {
             const str = ' * \n* *\n * \n';
             assert.equal(createChessBoard(3, 3, '*'), str);

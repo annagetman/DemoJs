@@ -1,4 +1,4 @@
-//Happy tickets
+//Happy ticket
 //There are 2 ways to count lucky tickets:
 //1. Simple - if a six - digit number is printed on the ticket, and the sum of the first three digits is equal
 //to the sum of the last three, then this ticket is considered lucky.

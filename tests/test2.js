@@ -1,7 +1,7 @@
 import { getAnalysisofEnvelopes } from '../src/task2.js';
 
 export const test2 = (assert) => {
-    describe('Task 2', function () {
+    describe('Task 2 - "Analysis of envelopes"', function () {
         it('function work correctly', function () {
             const envelopes1 = { a: 6, b: 8 };
             const envelopes2 = { c: 5, d: 7.7 };
