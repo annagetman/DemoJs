@@ -6,26 +6,28 @@
 //¬ходные параметры: число
 //¬ыход: извлеченный из числа палиндром либо 0, если извлечение не удалось.
 
-//function IsPalindrome(n) {
-//    return n + (((n += "").split("").reverse().join("") == n) ? " is a palindrome" : " is not a palindrome");
-//}
-
-//console.log(IsPalindrome(1234437));
-
-
-const getPalindromNamber = function (num) {
-    if (num < 0) return false;
-    if (num % 10 === 0) return false;
-    if (num < 10) return true;
-
-    let rev = 0;
-
-    while (num > rev) {
-        rev *= 10;
-        rev += num % 10;
-        num = Math.trunc(num/10)
+export function longestPalindrome(str) {
+    let max = '';
+    if (str == undefined) {
+        return false;
+    } else if (str.length >= 4) {
+        for (let i = 0; i < str.length; i++) {
+            for (let j = 0; j < 2; j++) {
+                let left = i;
+                let right = i + j;
+                while (str[left] && str[left] === str[right]) {
+                    left--;
+                    right++;
+                }
+                if ((right - left - 1) > max.length) {
+                    max = str.substring(left + 1, right);
+                }
+            }
+        }
+        return max;
     }
-    return num === rev || Math.trunc(rev/10)
+    else {
+        return 0;
+    }
 }
-
-console.log(getPalindromNamber(2552))
+console.log(longestPalindrome('2332'));
