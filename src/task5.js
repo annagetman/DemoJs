@@ -1,12 +1,14 @@
+//Happy tickets
+//There are 2 ways to count lucky tickets:
+//1. Simple - if a six - digit number is printed on the ticket, and the sum of the first three digits is equal
+//to the sum of the last three, then this ticket is considered lucky.
+//2. Hard - if the sum of the even digits of the ticket is equal to the sum of the odd digits of the ticket,
+//    then the ticket is considered lucky.
+//Determine programmatically which variant of counting lucky tickets will give them a greater number at a given interval.
 
-//Счастливые билеты
-//Есть 2 способа подсчёта счастливых билетов:
-//1. Простой — если на билете напечатано шестизначное число, и сумма первых трёх цифр равна сумме последних трёх, то этот билет считается счастливым.
-//2. Сложный — если сумма чётных цифр билета равна сумме нечётных цифр билета, то билет считается счастливым.
-//Определить программно какой вариант подсчёта счастливых билетов даст их большее количество на заданном интервале.
+//Input parameters: context object with min and max fields
+//Output: an object with information about the winning method and the number of lucky tickets for each counting method.
 
-//Входные параметры: объект context с полями min и max
-//Выход: объект с информацией о победившем методе и количестве счастливых билетов для каждого способа подсчёта.
 
 console.log('******************')
 const firstWay = function (num) {

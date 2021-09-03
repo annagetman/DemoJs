@@ -1,10 +1,9 @@
+//Palindrome
+//Check if a number or part of it is a palindrome.For example, the number 1234437 is not a palindrome, but its part is 3443.
+//Numbers less than 10 are not considered palindrome.
 
-//ѕалиндром
-//ѕроверить €вл€етс€ ли число или его часть палиндромом.Ќапример, число 1234437 не €вл€етс€ палиндромом, но €вл€етс€ палиндромом
-//его часть 3443. „исла меньшие, чем 10 палиндромом не считать.
-
-//¬ходные параметры: число
-//¬ыход: извлеченный из числа палиндром либо 0, если извлечение не удалось.
+//Input parameters: number
+//Output: the palindrome extracted from the number, or 0 if the extraction failed.
 
 export function longestPalindrome(str) {
     let max = '';

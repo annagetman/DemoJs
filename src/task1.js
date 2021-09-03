@@ -1,12 +1,13 @@
-//Шахматная доска
-//Вывести шахматную доску с заданными размерами высоты и ширины, по принципу:
+//Chess board----
+//Display a chessboard with the specified dimensions of height and width, according to the * space principle.
 //*  *  *  *  *  *
 //  *  *  *  *  *  *  
 //*  *  *  *  *  *
 //  *  *  *  *  *  *
-//Входные параметры: длина, ширина, символ для отображения.
-//    Выход: строка с представлением шахматной доски
-
+//Input parameters: length, width, symbol to display.
+//Output: string with chessboard representation
+//length, width - natural number(integer, positive, not equal to 0), [1, 64]
+//character is a string of length 1, not a space
 
 export const createChessBoard = (length, width, symb) => {
     let board = '';

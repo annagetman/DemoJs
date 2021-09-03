@@ -1,8 +1,8 @@
-//Ряд Фибоначчи для диапазона
-//Вывести все числа Фибоначчи, которые удовлетворяют переданному в функцию ограничению: находятся в указанном диапазоне, либо имеют указанную длину.
+//Fibonacci series for a range
+//Print all Fibonacci numbers that satisfy the constraint passed to the function: are in the specified range, or have the specified length.
 
-//Входные параметры: объект context с полями min и max, либо с полем length
-//Выход: массив чисел
+//Input parameters: a context object with min and max fields, or with a length field
+//Output: array of numbers
 
 
 const context = { length: 7 };

@@ -1,9 +1,8 @@
+//Number sequence
+//Print a comma - separated series of length n, consisting of natural numbers whose square is at least a given m.
 
-//Числовая последовательность
-//Вывести через запятую ряд длиной n, состоящий из натуральных чисел, квадрат которых не меньше заданного m.
-
-//Входные параметры: длина и значение минимального квадрата(ЗМК)
-//Выход: строка с рядом чисел
+//Input parameters: length and minimum square value(ZMK)
+//Output: string with row of numbers
 //Example:
 //in: 81, 3
 //out: 9, 10 11

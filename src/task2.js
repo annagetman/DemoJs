@@ -1,10 +1,10 @@
-//Анализ конвертов
-//Есть два конверта со сторонами(a, b) и(c, d).Требуется определить, можно ли один конверт вложить в другой.
-//Программа должна обрабатывать ввод чисел с плавающей точкой.
+//Analysis of envelopes
+//There are two envelopes with sides(a, b) and(c, d).It is required to determine whether one envelope can be nested in another.
+//The program must handle floating point input.
 
+//Input parameters: envelope1 and envelope2 objects
+//Output: envelope number, if attachment is possible, 0 - if attachment is impossible.
 
-//Входные параметры: объекты конверт1 и конверт2
-//Выход: номер конверта, если вложение возможно, 0 – если вложение невозможно.
 
 const envelopes1 = { a: 6, b: 8 };
 const envelopes2 = { c: 5, d: 7 };
