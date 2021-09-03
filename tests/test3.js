@@ -1,7 +1,7 @@
 import { sortTriangles } from '../src/task3.js';
 
 export const test3 = (assert) => {
-    describe('Task 3 - "Sorting triangles"', function () {
+    describe('Task 3 - "Sorting triangles"', () => {
         it('function work correctly', function () {
             let arrTriangles = [
                 { name: 'ABC3', a: 3, b: 7, c: 5 },
