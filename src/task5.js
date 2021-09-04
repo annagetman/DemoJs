@@ -10,14 +10,64 @@
 //Output: an object with information about the winning method and the number of lucky tickets for each counting method.
 
 
-console.log('******************')
-const firstWay = function (num) {
-    let firstSumm = 0;
-    let secondSumm = 0;
-   // if (num.lenght == 6) {
-        for (i = 0; i < num; i++) {
-            console.log(num)
-        //}
+console.log('******************');
+
+let context = {
+    min: 121212,
+    max: 212121
+};
+
+export const getGreaterMethodHappyTicket = (obj) => {
+    if (obj == undefined) {
+        let invalidData = {
+            status: 'fail',
+            reason: 'enter arguments'
+        };
+        return invalidData;
     }
+    else if (typeof (obj) != 'object') {
+        let invalidData = {
+            status: 'fail',
+            reason: 'data is not object'
+        };
+        return invalidData;
+    }
+    else if (obj.min < obj.max) {
+        let result = {
+            method: 0,
+            simpleHappyTicket: 0,
+            hardHappyTicket: 0
+        };
+        let simpleHappy = 0;
+        let hardHappy = 0;
+
+        let min = obj.min;
+        let max = obj.max;
+
+        while (min < max) {
+            let x = min.toString().split('');
+
+            let sumFirst = +x[0] + +x[1] + +x[2];
+            let sumLast = +x[3] + +x[4] + +x[5];
+            if (sumFirst == sumLast) { result.simpleHappyTicket += 1; }
+
+            let sumOdd = 0;
+            let sumEven = 0;
+            for (let i = 0; i < x.length; i += 1) {
+                x[i] % 2 ? sumEven += +x[i] : sumOdd += +x[i];
+            }
+            if (sumOdd == sumEven) { result.hardHappyTicket += 1; }
+
+            min += 1;
+        }
+        result.method = simpleHappy >= hardHappy ? 1 : 2;
+        return result;
+    }
+    return false;
+
 }
-console.log(firstWay(235145))
+
+
+
+
+console.log(getGreaterMethodHappyTicket(context))
