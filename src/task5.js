@@ -9,9 +9,6 @@
 //Input parameters: context object with min and max fields
 //Output: an object with information about the winning method and the number of lucky tickets for each counting method.
 
-
-console.log('******************');
-
 let context = {
     min: 121212,
     max: 212121
@@ -21,14 +18,14 @@ export const getGreaterMethodHappyTicket = (obj) => {
     if (obj == undefined) {
         let invalidData = {
             status: 'fail',
-            reason: 'enter arguments'
+            reason: 'Enter arguments'
         };
         return invalidData;
     }
     else if (typeof (obj) != 'object') {
         let invalidData = {
             status: 'fail',
-            reason: 'data is not object'
+            reason: 'Data is not object'
         };
         return invalidData;
     }

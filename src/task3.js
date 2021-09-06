@@ -5,9 +5,9 @@
 //Output: an ordered array of triangle names
 
 let arrTriangles = [
-    { name: 'ABC3', a: 2, b: 2, c: 1 },
-    { name: 'ABC1', a: 8, b: 2, c: 4 },
-    { name: 'ABC2', a: 2, b: 4, c: 4 }
+    { name: 'ABC', a: 10, b: 10, c: 10 },
+    { name: 'YJP', a: 8, b: 8, c: 8 },
+    { name: 'DRE', a: 2, b: 4, c: 4 }
 ];
 
 const getSquareTriangle = (a, b, c) => {
@@ -18,16 +18,44 @@ const getSquareTriangle = (a, b, c) => {
 
 
 export const sortTriangles = (arr) => {
-    let sortArrayTriangles = [];
-    arr.forEach(function (item) {
-        let res = getSquareTriangle(item.a, item.b, item.c);
-       // res.toFixed(2);
-        sortArrayTriangles.push(item.name);
-        sortArrayTriangles.sort();      
-       
-    })
-    return sortArrayTriangles;
+    if (arr == undefined) {
+        let invalidData = {
+            status: 'fail',
+            reason: 'Enter data'
+        };
+        return invalidData;
+    } else if (!Array.isArray(arr)) {
+        let invalidData = {
+            status: 'fail',
+            reason: 'Enter array'
+        };
+        return invalidData;
+    } else {
+
+        let sortArrayTriangles = [];
+        arr.forEach(function (item) {
+            let square = getSquareTriangle(item.a, item.b, item.c);
+
+            sortArrayTriangles.push({
+                name: item.name,
+                square: square
+            });
+
+        })
+        sortArrayTriangles.sort(function (a, b) {
+            if (a.square > b.square) {
+                return 1;
+            }
+            if (a.square < b.square) {
+                return -1;
+            }
+            return 0;
+        })
+
+        return sortArrayTriangles
+    }
 }
+
 
 console.log(sortTriangles(arrTriangles));
 

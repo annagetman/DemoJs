@@ -2,24 +2,24 @@ import { getNums } from '../src/task6.js';
 
 export const test6 = (assert) => {
     describe('Task 6 - "Number sequence"', () => {
-        it('function work correctly', () =>{
+        it('Function works correctly', () =>{
             const rowNums = '9,10,11';
-            assert.deepEqual(getNums(3, 81), rowNums);
+            assert.deepEqual(getNums(81, 3), rowNums);
         });
-        it('function return String', () => {
-            let rowNums = 77;
-            let minPow = 25;
-            let result = getNums(rowNums, minPow);
+        it('Function return string', () => {
+            const rowNums = 77;
+            const minPow = 25;
+            const result = getNums(rowNums, minPow);
             assert.isString(result);
         });
-        it('function must have number argument', () => {
-            let rowNums = [7];
-            let minPow = '25';
-            let result = getNums(rowNums, minPow);
+        it('Function must have number argument', () => {
+            const rowNums = [7];
+            const minPow = '25';
+            const result = getNums(rowNums, minPow);
             assert.isFalse(result);
         });
-        it('function have not arguments', () => {
-            let result = getNums();
+        it('Test to work with no arguments', () => {
+            const result = getNums();
             assert.isFalse(result);
         });
 

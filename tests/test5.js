@@ -2,7 +2,7 @@ import { getGreaterMethodHappyTicket } from '../src/task5.js';
 
 export const test5 = (assert) => {
     describe('Task 5 - "Happy tickets"', function () {
-        it('function work', () => {
+        it('Function works correctly', () => {
             const context = {
                 min: 121212,
                 max: 212121
@@ -14,10 +14,10 @@ export const test5 = (assert) => {
             }
             assert.deepEqual(getGreaterMethodHappyTicket(context), result);
         });
-        it('There are no arguments in the function', () => {
+        it('Test to work with no arguments', () => {
             let invalidData = {
                 status: 'fail',
-                reason: 'enter arguments'
+                reason: 'Enter arguments'
             };
             let result = getGreaterMethodHappyTicket();
             assert.deepEqual(result, invalidData);
@@ -25,7 +25,7 @@ export const test5 = (assert) => {
         it('Data is not object', () => {
             let invalidData = {
                 status: 'fail',
-                reason: 'data is not object'
+                reason: 'Data is not object'
             };
             let result = getGreaterMethodHappyTicket(4);
             assert.deepEqual(result, invalidData);
@@ -33,7 +33,7 @@ export const test5 = (assert) => {
         it('Data is not object', () => {
             let invalidData = {
                 status: 'fail',
-                reason: 'data is not object'
+                reason: 'Data is not object'
             };
             let result = getGreaterMethodHappyTicket('fff');
             assert.deepEqual(result, invalidData);
@@ -44,7 +44,7 @@ export const test5 = (assert) => {
             };
             let invalidData = {
                 status: 'fail',
-                reason: 'enter arguments'
+                reason: 'Enter arguments'
             };
             let result = getGreaterMethodHappyTicket(context);
             assert.isFalse(result, invalidData);

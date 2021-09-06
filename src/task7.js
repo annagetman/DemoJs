@@ -14,7 +14,7 @@ export const getNumbersFibonacci = (obj) => {
     if (obj.length > 47 || obj.length <= 0) {
         let invalidData = {
             status: 'fail',
-            reason: 'the number must be no less than 0 or no more than 47'
+            reason: 'The number must be greater than zero and no more than 47'
         };
 
         return invalidData;
@@ -22,7 +22,7 @@ export const getNumbersFibonacci = (obj) => {
     } else if (obj.length == undefined) {
         let invalidData = {
             status: 'fail',
-            reason: 'enter data'
+            reason: 'Enter data'
         }
 
         return invalidData;
@@ -33,6 +33,7 @@ export const getNumbersFibonacci = (obj) => {
             reason: 'data must be a object'
         }
         return invalidData;
+
     } else {
         for (let i = 2; i < numFibonacci; i++) {
             resultFibonacci.push(resultFibonacci[i - 2] + resultFibonacci[i - 1]);
@@ -41,6 +42,6 @@ export const getNumbersFibonacci = (obj) => {
     }
 }
 
-console.log(getNumbersFibonacci(context));
+
 
 
